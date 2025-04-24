@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "mc-failrate-demo"
+version = "0.1.0"
+description = ""
+authors = ["VadanKhan <vadankhan1@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^2.2.5"
+scipy = "^1.15.2"
+matplotlib = "^3.10.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
