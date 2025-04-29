@@ -29,9 +29,7 @@ def simulate_line_with_critical_tool(
         if i == critical_tool_index:
             current_fail_rate = np.full(n_wafers, critical_tool_fail_rate)
         elif i > critical_tool_index:
-            current_fail_rate = np.where(
-                critical_failed, boosted_fail_rate, base_fail_rate
-            )
+            current_fail_rate = np.where(critical_failed, boosted_fail_rate, base_fail_rate)
         else:
             current_fail_rate = np.full(n_wafers, base_fail_rate)
 
@@ -59,7 +57,7 @@ def simulate_line_with_critical_tool(
 
 
 # Config
-n_wafers = 100
+n_wafers = 10000
 n_tools = 100
 base_fail_rate = 0.005  # 2%
 boosted_fail_rate = 0.05  # 20% if failed at the critical tool
